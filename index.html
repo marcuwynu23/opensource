@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Wayne Menorca | Open Source Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for better aesthetics */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a;
+            /* Very Dark Background */
+        }
+
+        .border {
+            background-color: #161616;
+            /* Dark Gray Background */
+        }
+
+        /* Define the primary accent color */
+        .accent-color {
+            color: #86c95c;
+            /* Green Accent */
+        }
+
+        .bg-accent-color {
+            background-color: #86c95c;
+        }
+
+        /* Custom styling for card hover effect */
+        .project-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+
+        }
+
+        /* Image/Video Placeholder Aspect Ratio (16:9) */
+        .media-placeholder {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            /* 16:9 Aspect Ratio for video */
+            background-color: #2c2c2c;
+            /* Fallback background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Style for the embedded video to fill the container */
+        .media-placeholder iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body class="text-gray-200">
+
+    <!-- Header & Intro -->
+    <header class="bg-[#242424] py-12 border-b-4 border-[#86c95c]/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl sm:text-6xl font-extrabold text-white mb-3">
+                <span class="accent-color">Open Source</span> Architecture
+            </h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                A selection of personal R&D projects, DevOps tools, and foundational libraries built for performance and
+                community contribution.
+            </p>
+            <!-- Back to Main Portfolio Link -->
+            <a href="https://portfolio.marcuwynu.space"
+                class="mt-4 inline-block text-sm font-medium text-gray-400 hover:text-[#86c95c] transition duration-200">
+                &larr; Back to Main Portfolio
+            </a>
+        </div>
+    </header>
+
+    <!-- Projects Grid Section -->
+    <main class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Grid Container: Responsive 1, 2, or 3 columns -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- 1. Project Card: Pydaffodil - VPS Automation -->
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <!-- Placeholder image URL: 600x337 (16:9) -->
+                        <iframe src="https://www.youtube.com/embed/RszxsZAq0Ew" title="Enterprise GitFlow Enforcer Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">Pydaffodil - VPS Automation CLI</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            A Python command-line utility for automated setup, initial security hardening, and essential
+                            service deployment on new Virtual Private Servers (VPS).
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-blue-900 text-blue-300">Python</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-yellow-900 text-yellow-300">DevOps</span>
+                            <span class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">Bash</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/pydaffodil" target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s" target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Project Card: Secure GitFlow CLI -->
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <!-- Placeholder image URL: 600x337 (16:9) -->
+                        <iframe src="https://www.youtube.com/embed/RszxsZAq0Ew" title="Enterprise GitFlow Enforcer Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">Enterprise GitFlow Enforcer</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            A CLI tool written in TypeScript to standardize and enforce rigorous GitFlow practices,
+                            ensuring consistent branch naming, commit messages, and deployment pipelines.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-indigo-900 text-indigo-300">TypeScript</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-green-900 text-green-300">R&D</span>
+                            <span class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">Git
+                                Hooks</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/gitflow-cli" target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s" target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Project Card: BCCS-API-Lite (Node.js) -->
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <!-- Placeholder image URL: 600x337 (16:9) -->
+                        <iframe src="https://www.youtube.com/embed/RszxsZAq0Ew" title="Enterprise GitFlow Enforcer Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">BCCS API - Microservice Prototype</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            A lightweight, containerized microservice prototype demonstrating a highly-performant,
+                            scalable RESTful API structure built on Node.js and Express, focused on low latency.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-green-900 text-green-300">Node.js</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-red-900 text-red-300">Docker</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-yellow-900 text-yellow-300">Express</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/bccs-api-lite" target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s" target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Project Card: Real-Time Network Scanner (Networking Focus) -->
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <!-- Placeholder image URL: 600x337 (16:9) -->
+                        <iframe src="https://www.youtube.com/embed/RszxsZAq0Ew" title="Enterprise GitFlow Enforcer Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">Low-Latency Network Utility</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            A foundational utility exploring raw socket programming to build a custom, low-latency
+                            network scanner and monitoring tool, emphasizing efficient data handling over UDP/TCP.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-blue-900 text-blue-300">Python</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-purple-900 text-purple-300">Sockets</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">Networking</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/network-utility" target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s" target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Project Card: Simple CI/CD Action -->
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <!-- Placeholder image URL: 600x337 (16:9) -->
+                        <iframe src="https://www.youtube.com/embed/RszxsZAq0Ew" title="Enterprise GitFlow Enforcer Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">Reusable CI/CD Deployment Action</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            A custom GitHub Action template for deploying containerized applications to cloud
+                            environments via secure SSH connections, focusing on zero-downtime updates.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 text-xs font-medium rounded-full bg-red-900 text-red-300">YAML</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-yellow-900 text-yellow-300">DevOps</span>
+                            <span class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">GitHub
+                                Actions</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/cicd-action-template" target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s" target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Project Card: React/Tailwind Template -->
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <!-- Placeholder image URL: 600x337 (16:9) -->
+                        <iframe src="https://www.youtube.com/embed/RszxsZAq0Ew" title="Enterprise GitFlow Enforcer Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">Modern Frontend Boilerplate</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            A production-ready template using React, TypeScript, and Tailwind CSS, configured for rapid
+                            development, focusing on performance, accessibility, and clean component architecture.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-indigo-900 text-indigo-300">React</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-cyan-900 text-cyan-300">TailwindCSS</span>
+                            <span class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">UX/UI</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/react-ts-tailwind-boilerplate" target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s" target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. NEW Project Card: Project Management System Core -->
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <!-- Placeholder image URL: 600x337 (16:9) -->
+                        <iframe src="https://www.youtube.com/embed/RszxsZAq0Ew" title="Enterprise GitFlow Enforcer Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">PMS Core API & Logic</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            The backbone of a fully featured Project Management System, featuring task prioritization,
+                            user authentication, and real-time data sync using a scalable database architecture.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-pink-900 text-pink-300">API</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-green-900 text-green-300">Full-Stack</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">Database</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/pms-core-api" target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s" target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. NEW Project Card: Ticketing System -->
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <!-- Placeholder image URL: 600x337 (16:9) -->
+                        <iframe src="https://www.youtube.com/embed/RszxsZAq0Ew" title="Enterprise GitFlow Enforcer Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">Ticketing System Micro-App</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            A minimal ticketing/helpdesk solution focused on ticket lifecycle management, agent
+                            assignment, and status tracking with a simple, high-contrast, accessible interface.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 text-xs font-medium rounded-full bg-purple-900 text-purple-300">Web
+                                App</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-blue-900 text-blue-300">UX/UI</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-yellow-900 text-yellow-300">SaaS</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/ticketing-system" target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s" target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. NEW Project Card: UDP Intercom Core -->
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <!-- Placeholder image URL: 600x337 (16:9) -->
+                        <iframe src="https://www.youtube.com/embed/RszxsZAq0Ew" title="Enterprise GitFlow Enforcer Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">UDP Intercom Core Logic</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            The Python logic for a low-latency, UDP-based intercom system, implementing broadcast and
+                            direct call features with a Master-Worker architecture for reliable communication.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-blue-900 text-blue-300">Networking</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-red-900 text-red-300">Python</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">Architecture</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/udp-intercom-core" target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s" target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Call to action for more projects -->
+            <div class="mt-16 text-center p-8 rounded-xl shadow-inner">
+                <p class="text-2xl font-semibold text-white mb-3">See more contributions?</p>
+                <p class="text-lg text-gray-400 mb-4">
+                    Explore my full GitHub profile for additional commits, issue tracking, and contributions to larger
+                    projects.
+                </p>
+                <a href="https://github.com/marcuwynu23" target="_blank"
+                    class="inline-block bg-[#86c95c] text-[#242424] font-bold py-3 px-8 rounded-lg shadow-md hover:bg-[#72b44f] transition duration-300">
+                    Visit GitHub Profile
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#242424] text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            &copy; 2024 Mark Wayne Menorca - Open Source Development
+        </div>
+    </footer>
+</body>
+
+</html>
