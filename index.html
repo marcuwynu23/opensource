@@ -48,7 +48,6 @@
         .media-placeholder {
             position: relative;
             width: 100%;
-            padding-top: 56.25%;
             /* 16:9 Aspect Ratio for video */
             background-color: #2c2c2c;
             /* Fallback background */
@@ -65,6 +64,11 @@
             width: 100%;
             height: 100%;
         }
+
+        .media-placeholder:has(iframe) {
+            padding-top: 56.25%;
+            /* Apply only when iframe is present */
+        }
     </style>
 </head>
 
@@ -73,10 +77,10 @@
     <!-- Header & Intro -->
     <header class="bg-[#242424] py-12 border-b-4 border-[#86c95c]/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl sm:text-6xl font-extrabold text-white mb-3">
+            <h1 class="text-2xl md:text-5xl sm:text-6xl font-extrabold text-white mb-3">
                 <span class="accent-color">Open Source</span> Projects
             </h1>
-            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p class="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto">
                 A collection of open-source and personal R&D projects I’ve built to explore better practices in software
                 design, automation, and scalability. Each project reflects lessons learned from real-world scenarios.
             </p>
@@ -90,25 +94,65 @@
 
     <!-- Projects Grid Section -->
     <main class="py-16 sm:py-24">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Grid Container: Responsive 1, 2, or 3 columns -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <img id="screenshot"
+                            alt="Website Screenshot"
+                            src="https://opengraph.githubassets.com/5c4f73e3cc034e2fbe16d4ac924b1acd1196d40e5c88e41ccdc27cb316ceba81/marcuwynu23/Auto" />
+
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">AutoCLI</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            A powerful command-line tool designed to streamline your workflow by automating the
+                            execution of commands in separate instances of the terminal.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-blue-900 text-blue-300">C++</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-yellow-900 text-yellow-300">Automation</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">Terminal</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">Development</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">Commandline</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/Auto"
+                                target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s"
+                                target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <!-- 1. Project Card: Pydaffodil - VPS Automation -->
                 <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
                     <!-- Image/Video Placeholder -->
                     <div class="media-placeholder border-b border-gray-700">
                         <!-- Placeholder image URL: 600x337 (16:9) -->
-                        <iframe src="https://www.youtube.com/embed/RszxsZAq0Ew"
-                            title="Enterprise GitFlow Enforcer Demo"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
+                        <img id="screenshot"
+                            alt="Website Screenshot"
+                            src="https://opengraph.githubassets.com/5c4f73e3cc034e2fbe16d4ac924b1acd1196d40e5c88e41ccdc27cb316ceba81/marcuwynu23/pydaffodil" />
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">Pydaffodil</h3>
+                        <h3 class="text-2xl font-bold text-white mb-2">Pydaffodil</h3>
                         <p class="text-sm text-gray-400 mb-4">
                             A reusable deployment framework for Python, designed to simplify the process
                             of deploying applications to remote VPS servers.
@@ -143,15 +187,12 @@
                     <!-- Image/Video Placeholder -->
                     <div class="media-placeholder border-b border-gray-700">
                         <!-- Placeholder image URL: 600x337 (16:9) -->
-                        <iframe src="https://www.youtube.com/embed/RszxsZAq0Ew"
-                            title="Enterprise GitFlow Enforcer Demo"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
+                        <img id="screenshot"
+                            alt="Website Screenshot"
+                            src="https://opengraph.githubassets.com/5c4f73e3cc034e2fbe16d4ac924b1acd1196d40e5c88e41ccdc27cb316ceba81/marcuwynu23/webserve" />
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">WebServe</h3>
+                        <h3 class="text-2xl font-bold text-white mb-2">WebServe</h3>
                         <p class="text-sm text-gray-400 mb-4">
                             A blazing-fast static file and SPA Web server.
                         </p>
@@ -165,7 +206,45 @@
                         </div>
                         <!-- Button Group -->
                         <div class="flex space-x-3">
-                            <a href="https://github.com/marcuwynu23/network-utility"
+                            <a href="https://github.com/marcuwynu23/webserve"
+                                target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s"
+                                target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <!-- Placeholder image URL: 600x337 (16:9) -->
+                        <img id="screenshot"
+                            alt="Website Screenshot"
+                            src="https://opengraph.githubassets.com/5c4f73e3cc034e2fbe16d4ac924b1acd1196d40e5c88e41ccdc27cb316ceba81/marcuwynu23/blocrun" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Blocrun</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            A commandline tool for Windows that lets you define named blocks of commands, each running
+                            in its own terminal instance.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-red-900 text-red-300">Javascript</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-yellow-900 text-yellow-300">Automation</span>
+                            <span class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">Terminal
+                                Instance</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/blocrun"
                                 target="_blank"
                                 class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
                                 View on GitHub
@@ -185,15 +264,12 @@
                     <!-- Image/Video Placeholder -->
                     <div class="media-placeholder border-b border-gray-700">
                         <!-- Placeholder image URL: 600x337 (16:9) -->
-                        <iframe src="https://www.youtube.com/embed/RszxsZAq0Ew"
-                            title="Enterprise GitFlow Enforcer Demo"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
+                        <img id="screenshot"
+                            alt="Website Screenshot"
+                            src="https://opengraph.githubassets.com/5c4f73e3cc034e2fbe16d4ac924b1acd1196d40e5c88e41ccdc27cb316ceba81/marcuwynu23/jsdaffodil" />
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">JsDaffodil</h3>
+                        <h3 class="text-2xl font-bold text-white mb-2">JsDaffodil</h3>
                         <p class="text-sm text-gray-400 mb-4">
                             A lightweight, declarative deployment automation framework for Node.js, inspired by
                             pydaffodil.
@@ -207,7 +283,7 @@
                         </div>
                         <!-- Button Group -->
                         <div class="flex space-x-3">
-                            <a href="https://github.com/marcuwynu23/cicd-action-template"
+                            <a href="https://github.com/marcuwynu23/jsdaffodil"
                                 target="_blank"
                                 class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
                                 View on GitHub
@@ -227,15 +303,12 @@
                     <!-- Image/Video Placeholder -->
                     <div class="media-placeholder border-b border-gray-700">
                         <!-- Placeholder image URL: 600x337 (16:9) -->
-                        <iframe src="https://www.youtube.com/embed/RszxsZAq0Ew"
-                            title="Enterprise GitFlow Enforcer Demo"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
+                        <img id="screenshot"
+                            alt="Website Screenshot"
+                            src="https://opengraph.githubassets.com/5c4f73e3cc034e2fbe16d4ac924b1acd1196d40e5c88e41ccdc27cb316ceba81/marcuwynu23/frbjs" />
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">frbjs</h3>
+                        <h3 class="text-2xl font-bold text-white mb-2">frbjs</h3>
                         <p class="text-sm text-gray-400 mb-4">
                             a lightweight RabbitMQ wrapper built with `amqplib`, designed for seamless message sending
                             and receiving with minimal setup. Perfect for quick integrations and scalable solutions.
@@ -250,7 +323,7 @@
                         </div>
                         <!-- Button Group -->
                         <div class="flex space-x-3">
-                            <a href="https://github.com/marcuwynu23/react-ts-tailwind-boilerplate"
+                            <a href="https://github.com/marcuwynu23/frbjs"
                                 target="_blank"
                                 class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
                                 View on GitHub
@@ -270,15 +343,12 @@
                     <!-- Image/Video Placeholder -->
                     <div class="media-placeholder border-b border-gray-700">
                         <!-- Placeholder image URL: 600x337 (16:9) -->
-                        <iframe src="https://www.youtube.com/embed/RszxsZAq0Ew"
-                            title="Enterprise GitFlow Enforcer Demo"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
+                        <img id="screenshot"
+                            alt="Website Screenshot"
+                            src="https://opengraph.githubassets.com/5c4f73e3cc034e2fbe16d4ac924b1acd1196d40e5c88e41ccdc27cb316ceba81/marcuwynu23/mingledb" />
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">MingleDB</h3>
+                        <h3 class="text-2xl font-bold text-white mb-2">MingleDB</h3>
                         <p class="text-sm text-gray-400 mb-4">
                             Lightweight file based NoSQL Database.
                         </p>
@@ -312,15 +382,12 @@
                     <!-- Image/Video Placeholder -->
                     <div class="media-placeholder border-b border-gray-700">
                         <!-- Placeholder image URL: 600x337 (16:9) -->
-                        <iframe src="https://www.youtube.com/embed/RszxsZAq0Ew"
-                            title="Enterprise GitFlow Enforcer Demo"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
+                        <img id="screenshot"
+                            alt="Website Screenshot"
+                            src="https://opengraph.githubassets.com/5c4f73e3cc034e2fbe16d4ac924b1acd1196d40e5c88e41ccdc27cb316ceba81/marcuwynu23/blocrun" />
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">Blocrun</h3>
+                        <h3 class="text-2xl font-bold text-white mb-2">Blocrun</h3>
                         <p class="text-sm text-gray-400 mb-4">
                             A Commandline tool for Windows that lets you define named blocks of commands, each running
                             in its own terminal instance.
@@ -350,7 +417,7 @@
                     </div>
                 </div>
 
-                <!-- 9. NEW Project Card: UDP Intercom Core -->
+
                 <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
                     <!-- Image/Video Placeholder -->
                     <div class="media-placeholder border-b border-gray-700">
@@ -363,7 +430,7 @@
                         </iframe>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-[#86c95c] mb-2">Narciso</h3>
+                        <h3 class="text-2xl font-bold text-white mb-2">Narciso</h3>
                         <p class="text-sm text-gray-400 mb-4">
                             A lightweight web library built on top of native PHP, designed to simplify and enhance web
                             development tasks.
@@ -393,25 +460,228 @@
                     </div>
                 </div>
 
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <!-- Placeholder image URL: 600x337 (16:9) -->
+                        <img id="screenshot"
+                            alt="Website Screenshot"
+                            src="https://opengraph.githubassets.com/5c4f73e3cc034e2fbe16d4ac924b1acd1196d40e5c88e41ccdc27cb316ceba81/marcuwynu23/sshtunnel" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">SSHTunnel</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            A cross-platform command-line utility designed for reverse SSH tunneling
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-blue-900 text-blue-300">Golang</span>
+                            <span class="px-3 py-1 text-xs font-medium rounded-full bg-red-900 text-red-300">SSH</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-red-900 text-red-300">Tunneling</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">Development</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/udp-intercom-core"
+                                target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s"
+                                target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <!-- Placeholder image URL: 600x337 (16:9) -->
+                        <img id="screenshot"
+                            alt="Website Screenshot"
+                            src="https://opengraph.githubassets.com/5c4f73e3cc034e2fbe16d4ac924b1acd1196d40e5c88e41ccdc27cb316ceba81/marcuwynu23/mctp" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">MCTP (Markdown Content Transfer Protocol)
+                        </h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            A lightweight TCP-based protocol designed for serving and retrieving Markdown content over
+                            simple socket connections — without the overhead of HTTP
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-blue-900 text-blue-300">Protocol</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-red-900 text-red-300">TCP/UDP</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">Transfer</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/mctp"
+                                target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s"
+                                target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <!-- Placeholder image URL: 600x337 (16:9) -->
+                        <img id="screenshot"
+                            alt="Website Screenshot"
+                            src="https://opengraph.githubassets.com/5c4f73e3cc034e2fbe16d4ac924b1acd1196d40e5c88e41ccdc27cb316ceba81/marcuwynu23/mctp-markon-browser" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Markon Browser</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            A browser desktop application designed to connect to and render Markdown content from MCTP
+                            (Markdown Content Transfer Protocol) servers.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 text-xs font-medium rounded-full bg-blue-900 text-blue-300">MCTP
+                                Browser</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-red-900 text-red-300">Browser</span>
+                            <span class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">MCTP</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/mctp-markon-browser"
+                                target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s"
+                                target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <!-- Placeholder image URL: 600x337 (16:9) -->
+                        <img id="screenshot"
+                            alt="Website Screenshot"
+                            src="https://opengraph.githubassets.com/5c4f73e3cc034e2fbe16d4ac924b1acd1196d40e5c88e41ccdc27cb316ceba81/marcuwynu23/nmap-action" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Nmap Action</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            Nmap Github Action
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-blue-900 text-blue-300">nmap</span>
+                            <span class="px-3 py-1 text-xs font-medium rounded-full bg-red-900 text-red-300">github
+                                actions</span>
+                            <span class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">plugins</span>
+                            <span class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">action</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/nmap-action"
+                                target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s"
+                                target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="project-card border rounded-xl overflow-hidden border-2 border-transparent">
+                    <!-- Image/Video Placeholder -->
+                    <div class="media-placeholder border-b border-gray-700">
+                        <!-- Placeholder image URL: 600x337 (16:9) -->
+                        <img id="screenshot"
+                            alt="Website Screenshot"
+                            src="https://opengraph.githubassets.com/5c4f73e3cc034e2fbe16d4ac924b1acd1196d40e5c88e41ccdc27cb316ceba81/marcuwynu23/onqueue" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">onqueue</h3>
+                        <p class="text-sm text-gray-400 mb-4">
+                            A lightweight, multithreaded task queue runner built in Rust using Axum. It supports REST
+                            API and CLI-based task management, making it ideal for automating shell commands, deployment
+                            tasks, and lightweight job queues.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 text-xs font-medium rounded-full bg-blue-900 text-blue-300">queuing</span>
+                            <span class="px-3 py-1 text-xs font-medium rounded-full bg-red-900 text-red-300">task
+                                runner</span>
+                            <span class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">tool</span>
+                            <span class="px-3 py-1 text-xs font-medium rounded-full border text-gray-300">queue</span>
+                        </div>
+                        <!-- Button Group -->
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/marcuwynu23/onqueue"
+                                target="_blank"
+                                class="w-1/2 block text-center border hover:bg-[#86c95c] text-white hover:text-[#242424] font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                View on GitHub
+                            </a>
+                            <!-- YouTube Link (Placeholder used) -->
+                            <a href="https://www.youtube.com/watch?v=RszxsZAq0Ew&t=37s"
+                                target="_blank"
+                                class="w-1/2 block text-center bg-red-700/80 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition duration-300 text-sm">
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Call to action for more projects -->
             <div class="mt-16 text-center p-8 rounded-xl shadow-inner">
-                <p class="text-2xl font-semibold text-white mb-3">See more contributions?</p>
-                <p class="text-lg text-gray-400 mb-4">
+                <p class="text-lg md:text-2xl font-semibold text-white mb-3">See more contributions?</p>
+                <p class="text-sm md:text-lg text-gray-400 mb-4">
                     I share more of my experiments, fixes, and small contributions on GitHub. You're welcome to explore
                     them
                     or reuse anything that might help your own workflow.
                 </p>
                 <a href="https://github.com/marcuwynu23"
                     target="_blank"
-                    class="inline-block bg-[#86c95c] text-[#242424] font-bold py-3 px-8 rounded-lg shadow-md hover:bg-[#72b44f] transition duration-300">
+                    class="inline-block text-white text-sm md:text-md bg-[#86c95c] text-[#242424] font-bold py-3 px-8 rounded-lg shadow-md hover:bg-[#72b44f] transition duration-300">
                     Visit GitHub Profile
                 </a>
             </div>
         </div>
     </main>
-
+    <script>
+        function getScreenshotUrl(targetUrl) {
+            const apiKey = 'pk_f07da5571a272527e84fb5a6a6b00e0ce60fa9c8';
+            return `https://jsonlink.io/api/screenshot?api_key=${apiKey}&url=${encodeURIComponent(targetUrl)}`;
+        }
+    </script>
     <!-- Footer -->
     <footer class="bg-[#242424] text-white py-8 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
